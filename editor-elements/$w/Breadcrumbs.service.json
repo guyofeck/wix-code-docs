@@ -26,16 +26,15 @@
           " a clickable icon for navigating to your site's home page. The vector image file can be an image file ",
           " from the Media Manager, an external SVG image from any web location, or a literal SVG XML string.",
           "",
-          " Breadcrumb item links are optional. You might want to omit the link for the item that represents the ",
-          " current page." ],
+          " Breadcrumb item links are optional. It is unnecessary, for example, to add a link for the item that represents the ",
+          " current page because there is no reason to navigate to it." ],
       "links": [],
       "examples": [],
       "extra":
         {  } },
   "properties":
     [ { "name": "items",
-        "labels":
-          [ "changed" ],
+        "labels": [],
         "get": true,
         "set": true,
         "type":
@@ -202,7 +201,6 @@
               "optional": true } ],
         "extra":
           {  },
-        "labels":
-          [ "changed" ] } ],
+        "labels": [] } ],
   "extra":
     { "queryable": true } }
