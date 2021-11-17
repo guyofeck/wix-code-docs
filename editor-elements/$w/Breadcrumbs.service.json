@@ -4,7 +4,7 @@
     [ "$w.HiddenCollapsedMixin",
       "$w.ViewportMixin" ],
   "labels":
-    [ "new" ],
+    [ "changed" ],
   "location":
     { "lineno": 1,
       "filename": "Breadcrumbs.js" },
@@ -15,7 +15,7 @@
           "",
           "![Sample breadcrumbs](images/breadcrumbs.png \"Breadcrumbs\")",
           "",
-          " With Velo, you can customize breadcrumb items. For example, using Velo you can add breadcrumbs ",
+          " With Velo, you can customize breadcrumb items by changing their labels, links, and icons. You can also add breadcrumbs ",
           " to dynamic pages, which is not supported by default. ",
           " ",
           " The `Breadcrumbs` element typically consists of sets of labels and links. When the site visitor clicks",
@@ -34,7 +34,8 @@
         {  } },
   "properties":
     [ { "name": "items",
-        "labels": [],
+        "labels":
+          [ "changed" ],
         "get": true,
         "set": true,
         "type":
@@ -51,7 +52,7 @@
           { "summary": "Sets or gets the items in a `Breadcrumbs` element.",
             "description":
               [ "Setting the `items` property sets the items",
-                " for to a `Breadcrumbs` element.",
+                " for a `Breadcrumbs` element.",
                 "",
                 " Set `items` to an empty array (`[]`) to remove all breadcrumb items.",
                 "",
@@ -189,11 +190,11 @@
         "members":
           [ { "name": "label",
               "type": "string",
-              "doc": "The label of the breadcrumb item. This is text that the site visitor sees and can click to navigate. Required if `icon` is not specified. If not specified, omitted from the returned array.",
+              "doc": "The label of the breadcrumb item. This is text that the site visitor sees and can click to navigate. Required if `icon` is not specified. If not specified, the `label` key is omitted from the returned array.",
               "optional": true },
             { "name": "icon",
               "type": "string",
-              "doc": "The icon of the breadcrumb item. This is a vector image that the site visitor sees and can click to navigate. Required if `label` is not specified. If not specified, omitted from the returned array.\n\n The vector image file can be an image file from the Media Manager, an external SVG image from any web location, or a literal SVG XML string.\n\n The formats supported are:\n + Vector images from the Media Manager: `wix:vector://v1/<vector_uri>/<filename>`\n + Vector images from the web: `http(s)://<vector image url>`\n + Vector XML string: `<svg>...</svg>`",
+              "doc": "The icon of the breadcrumb item. This is a vector image that the site visitor sees and can click to navigate. Required if `label` is not specified. If not specified,  the `icon` key is omitted from the returned array.\n\n The vector image file can be an image file from the Media Manager, an external SVG image from any web location, or a literal SVG XML string.\n\n The formats supported are:\n + Vector images from the Media Manager: `wix:vector://v1/<vector_uri>/<filename>`\n + Vector images from the web: `http(s)://<vector image url>`\n + Vector XML string: `<svg>...</svg>`",
               "optional": true },
             { "name": "link",
               "type": "string",
@@ -201,6 +202,7 @@
               "optional": true } ],
         "extra":
           {  },
-        "labels": [] } ],
+        "labels":
+          [ "changed" ] } ],
   "extra":
     { "queryable": true } }
