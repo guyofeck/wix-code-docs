@@ -20,7 +20,7 @@
           " You can use Velo to add breadcrumbs ",
           " to dynamic pages, which is not supported in the Wix Editor. ",
           " ",
-          " The `Breadcrumbs` consists of sets of labels, icons, and links. When the site visitor clicks",
+          " `Breadcrumbs` consist of sets of labels, icons, and links. When the site visitor clicks",
           " a label or an icon, they navigate to the corresponding link. ",
           "",
           " Icons are vector image files ",
