@@ -15,15 +15,15 @@
           "",
           "![Sample breadcrumbs](images/breadcrumbs.png \"Breadcrumbs\")",
           "",
-          " With Velo, you can customize breadcrumb items by changing their labels, links, and icons. You can also add breadcrumbs ",
-          " to dynamic pages, which is not supported by default. ",
+          " With Velo, you can customize breadcrumb items by changing their labels, links, and icons. ",
+          "",
+          " You can use Velo to add breadcrumbs ",
+          " to dynamic pages, which is not supported in the Wix Editor. ",
           " ",
           " The `Breadcrumbs` consists of sets of labels, icons, and links. When the site visitor clicks",
           " a label or an icon, they navigate to the corresponding link. ",
           "",
-          " You can also specify clickable icons as breadcrumb items. For example, ",
-          " you can use a vector image of a house as",
-          " a clickable icon for navigating to your site's home page. The vector image file can be an image file ",
+          " Icons are vector image files ",
           " from the Media Manager, an external SVG image from any web location, or a literal SVG XML string.",
           "",
           " Breadcrumb item links are optional. It is unnecessary, for example, to add a link for the item that represents the ",
@@ -34,8 +34,7 @@
         {  } },
   "properties":
     [ { "name": "items",
-        "labels":
-          [ "changed" ],
+        "labels": [],
         "get": true,
         "set": true,
         "type":
@@ -202,7 +201,6 @@
               "optional": true } ],
         "extra":
           {  },
-        "labels":
-          [ "changed" ] } ],
+        "labels": [] } ],
   "extra":
     { "queryable": true } }
