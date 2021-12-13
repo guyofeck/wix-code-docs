@@ -33,7 +33,7 @@
               "doc": "The payment that should be added to the invoice." },
             { "name": "options",
               "type": "wix-billing-backend.Invoices.AuthOptions",
-              "doc": "An object with the following boolean property: suppressAuth.",
+              "doc": "Authorization options.",
               "optional": true } ],
         "ret":
           { "type":
@@ -122,8 +122,7 @@
         "extra":
           {  } },
       { "name": "createInvoice",
-        "labels":
-          [ "changed" ],
+        "labels": [],
         "nameParams": [],
         "params":
           [ { "name": "invoiceFields",
@@ -302,7 +301,7 @@
               "doc": "Object containing the ID and version of the invoice." },
             { "name": "options",
               "type": "wix-billing-backend.Invoices.AuthOptions",
-              "doc": "An object with the following boolean property: suppressAuth.",
+              "doc": "Authorization options.",
               "optional": true } ],
         "ret":
           { "type":
@@ -414,7 +413,7 @@
               "doc": "ID of the invoice to delete." },
             { "name": "options",
               "type": "wix-billing-backend.Invoices.AuthOptions",
-              "doc": "An object with the following boolean property: suppressAuth.",
+              "doc": "Authorization options.",
               "optional": true } ],
         "ret":
           { "type":
@@ -463,7 +462,7 @@
               "doc": "ID of the invoice to get." },
             { "name": "options",
               "type": "wix-billing-backend.Invoices.AuthOptions",
-              "doc": "An object with the following boolean property: suppressAuth.",
+              "doc": "Authorization options.",
               "optional": true } ],
         "ret":
           { "type":
@@ -652,7 +651,7 @@
               "doc": "Information used when sending the email." },
             { "name": "options",
               "type": "wix-billing-backend.Invoices.AuthOptions",
-              "doc": "An object with the following boolean property: suppressAuth.",
+              "doc": "Authorization options.",
               "optional": true } ],
         "ret":
           { "type":
@@ -746,7 +745,7 @@
               "optional": true },
             { "name": "options",
               "type": "wix-billing-backend.Invoices.AuthOptions",
-              "doc": "An object with the following boolean property: suppressAuth.",
+              "doc": "Authorization options.",
               "optional": true } ],
         "ret":
           { "type":
@@ -817,8 +816,7 @@
         "extra":
           {  } },
       { "name": "voidInvoice",
-        "labels":
-          [ "changed" ],
+        "labels": [],
         "nameParams": [],
         "params":
           [ { "name": "id",
@@ -1209,8 +1207,7 @@
               "doc": "Address in human readable format." } ],
         "extra":
           {  },
-        "labels":
-          [ "changed" ] },
+        "labels": [] },
       { "name": "AuthOptions",
         "locations":
           [ { "lineno": 26,
@@ -1226,8 +1223,7 @@
               "doc": "When `true`,\nprevents permission checks from running for the operation.\nDefaults to `true`." } ],
         "extra":
           {  },
-        "labels":
-          [ "changed" ] },
+        "labels": [] },
       { "name": "CalculatedTax",
         "locations":
           [ { "lineno": 260,
@@ -1406,8 +1402,7 @@
               "doc": "Tax code." } ],
         "extra":
           {  },
-        "labels":
-          [ "changed" ] },
+        "labels": [] },
       { "name": "Customer",
         "locations":
           [ { "lineno": 84,
@@ -1749,8 +1744,7 @@
               "optional": true } ],
         "extra":
           {  },
-        "labels":
-          [ "changed" ] },
+        "labels": [] },
       { "name": "Discount",
         "locations":
           [ { "lineno": 235,
@@ -1945,8 +1939,7 @@
               "doc": "Discount type.\n\nEither:\n\n+ `\"Fixed\"`: A fixed amount is deducted.\n+ `\"Percentage\"`: A percentage of the total amount is deducted." } ],
         "extra":
           {  },
-        "labels":
-          [ "changed" ] },
+        "labels": [] },
       { "name": "EmailInfo",
         "locations":
           [ { "lineno": 321,
@@ -2010,8 +2003,7 @@
               "doc": "Email body. Limited formatting in the email body can be\nachieved using standard JavaScript string formatting." } ],
         "extra":
           {  },
-        "labels":
-          [ "changed" ] },
+        "labels": [] },
       { "name": "IdAndVersion",
         "locations":
           [ { "lineno": 17,
@@ -2223,8 +2215,7 @@
               "doc": "Invoice version." } ],
         "extra":
           {  },
-        "labels":
-          [ "changed" ] },
+        "labels": [] },
       { "name": "Invoice",
         "locations":
           [ { "lineno": 28,
@@ -2449,8 +2440,7 @@
               "doc": "Dates associated with the invoice." } ],
         "extra":
           {  },
-        "labels":
-          [ "changed" ] },
+        "labels": [] },
       { "name": "InvoiceDates",
         "locations":
           [ { "lineno": 63,
@@ -2753,8 +2743,7 @@
               "doc": "Invoice due date." } ],
         "extra":
           {  },
-        "labels":
-          [ "changed" ] },
+        "labels": [] },
       { "name": "InvoiceDynamicTotals",
         "locations":
           [ { "lineno": 82,
@@ -2924,8 +2913,7 @@
               "doc": "Balance amount." } ],
         "extra":
           {  },
-        "labels":
-          [ "changed" ] },
+        "labels": [] },
       { "name": "InvoiceFields",
         "locations":
           [ { "lineno": 90,
@@ -3152,8 +3140,7 @@
               "doc": "Dates associated with the invoice." } ],
         "extra":
           {  },
-        "labels":
-          [ "changed" ] },
+        "labels": [] },
       { "name": "ItemizedFee",
         "locations":
           [ { "lineno": 213,
@@ -3323,8 +3310,7 @@
               "doc": "Item fee price." } ],
         "extra":
           {  },
-        "labels":
-          [ "changed" ] },
+        "labels": [] },
       { "name": "LineItem",
         "locations":
           [ { "lineno": 118,
@@ -3643,8 +3629,7 @@
               "optional": true } ],
         "extra":
           {  },
-        "labels":
-          [ "changed" ] },
+        "labels": [] },
       { "name": "LineItemTax",
         "locations":
           [ { "lineno": 141,
@@ -3950,8 +3935,7 @@
               "doc": "Line item tax code." } ],
         "extra":
           {  },
-        "labels":
-          [ "changed" ] },
+        "labels": [] },
       { "name": "Locale",
         "locations":
           [ { "lineno": 167,
@@ -4118,8 +4102,7 @@
               "doc": "An IETF language tag.\nSome common language tags include:\n\n+ `\"en-US\"`: English, United States\n+ `\"en-GB\"`: English, British\n+ `\"es-ES\"`: Spanish, Spain\n+ `\"de-DE\"`: German, Germany\n+ `\"ja-JP\"`: Japanese, Japan\n+ `\"fr-CH\"`: French, Switzerland\n+ `\"it-IT\"`: Italian, Italy" } ],
         "extra":
           {  },
-        "labels":
-          [ "changed" ] },
+        "labels": [] },
       { "name": "MetaData",
         "locations":
           [ { "lineno": 283,
@@ -4436,8 +4419,7 @@
               "optional": true } ],
         "extra":
           {  },
-        "labels":
-          [ "changed" ] },
+        "labels": [] },
       { "name": "Payment",
         "locations":
           [ { "lineno": 72,
@@ -4613,8 +4595,7 @@
               "doc": "Payment date." } ],
         "extra":
           {  },
-        "labels":
-          [ "changed" ] },
+        "labels": [] },
       { "name": "Response",
         "locations":
           [ { "lineno": 303,
@@ -4806,8 +4787,7 @@
               "doc": "ID and version information." } ],
         "extra":
           {  },
-        "labels":
-          [ "changed" ] },
+        "labels": [] },
       { "name": "StreetAddress",
         "locations":
           [ { "lineno": 340,
@@ -5101,8 +5081,7 @@
               "doc": "Street address type. Either `\"Number\"` or `\"Name\"`." } ],
         "extra":
           {  },
-        "labels":
-          [ "changed" ] },
+        "labels": [] },
       { "name": "TotalPrice",
         "locations":
           [ { "lineno": 194,
@@ -5284,7 +5263,6 @@
               "doc": "Total price of the itemized fees and taxes." } ],
         "extra":
           {  },
-        "labels":
-          [ "changed" ] } ],
+        "labels": [] } ],
   "extra":
     {  } }
