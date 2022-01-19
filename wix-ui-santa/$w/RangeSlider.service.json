@@ -7,7 +7,7 @@
       "$w.HiddenCollapsedMixin",
       "$w.FocusMixin" ],
   "labels":
-    [ "new" ],
+    [ "changed" ],
   "location":
     { "lineno": 1,
       "filename": "RangeSlider.js" },
@@ -54,6 +54,64 @@
                 { "title": "Set a range slider's label",
                   "body":
                     [ "$w('#myRangeSlider').label = \"Set a range value\";" ],
+                  "extra":
+                    {  } } ],
+            "extra":
+              {  } },
+        "extra":
+          {  } },
+      { "name": "max",
+        "labels":
+          [ "new" ],
+        "get": true,
+        "set": true,
+        "type": "number",
+        "locations":
+          [ { "lineno": 68,
+              "filename": "RangeSlider.js" },
+            { "lineno": 79,
+              "filename": "RangeSlider.js" } ],
+        "docs":
+          { "summary": "Sets or gets the slider's maximum value.",
+            "links": [],
+            "examples":
+              [ { "title": "Get a slider's maximum value",
+                  "body":
+                    [ "let rangeSliderMax = $w('#myRangeSlider').max; // 100" ],
+                  "extra":
+                    {  } },
+                { "title": "Set a slider's maximum value",
+                  "body":
+                    [ "$w('#myRangeSlider').max = 100;" ],
+                  "extra":
+                    {  } } ],
+            "extra":
+              {  } },
+        "extra":
+          {  } },
+      { "name": "min",
+        "labels":
+          [ "new" ],
+        "get": true,
+        "set": true,
+        "type": "number",
+        "locations":
+          [ { "lineno": 50,
+              "filename": "RangeSlider.js" },
+            { "lineno": 61,
+              "filename": "RangeSlider.js" } ],
+        "docs":
+          { "summary": "Sets or gets the range slider track's minimum value.",
+            "links": [],
+            "examples":
+              [ { "title": "Get a slider's minimum value",
+                  "body":
+                    [ "let rangeSliderMin = $w('#myRangeSlider').min; // 0" ],
+                  "extra":
+                    {  } },
+                { "title": "Set a slider's minimum value",
+                  "body":
+                    [ "$w('#myRangeSlider').min = 0;" ],
                   "extra":
                     {  } } ],
             "extra":
