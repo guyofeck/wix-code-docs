@@ -1,0 +1,67 @@
+{ "name": "RangeSlider",
+  "memberOf": "$w",
+  "mixes":
+    [ "$w.Element",
+      "$w.ValueMixin",
+      "$w.DisabledMixin",
+      "$w.HiddenCollapsedMixin",
+      "$w.FocusMixin" ],
+  "labels":
+    [ "new" ],
+  "location":
+    { "lineno": 1,
+      "filename": "RangeSlider.js" },
+  "docs":
+    { "summary": "Range Sliders allow users to select two numbers from a given range.",
+      "description":
+        [ "Range sliders offer a site visitor a way to input two numbers by sliding two \"handles\" ",
+          "along a track. You can set the range of values for the range slider as well as its default value. ",
+          "",
+          "- use case",
+          "- how to configure",
+          "- can be used as single slider",
+          "",
+          " The slider's values can be configured in one of two ways:",
+          "",
+          " + Value: You define the size of the steps between values, and the slider",
+          "   calculates how many steps fit in the slider's range.",
+          " + Count: You define the number of steps between the values you want your",
+          "   slider to have, and the slider calculates the size of each step." ],
+      "links": [],
+      "examples": [],
+      "extra":
+        {  } },
+  "properties":
+    [ { "name": "label",
+        "labels": [],
+        "get": true,
+        "set": true,
+        "type": "string",
+        "locations":
+          [ { "lineno": 32,
+              "filename": "RangeSlider.js" },
+            { "lineno": 43,
+              "filename": "RangeSlider.js" } ],
+        "docs":
+          { "summary": "Sets or gets the label of the range slider.",
+            "links": [],
+            "examples":
+              [ { "title": "Get a range slider's label",
+                  "body":
+                    [ "let rangeSliderLabel = $w('#myRangeSlider').label; // Set a range value" ],
+                  "extra":
+                    {  } },
+                { "title": "Set a range slider's label",
+                  "body":
+                    [ "$w('#myRangeSlider').label = \"Set a range value\";" ],
+                  "extra":
+                    {  } } ],
+            "extra":
+              {  } },
+        "extra":
+          {  } } ],
+  "operations": [],
+  "callbacks": [],
+  "messages": [],
+  "extra":
+    { "queryable": true } }
