@@ -15,12 +15,12 @@
     { "summary": "Range Sliders allow users to select a range of values from a given range.",
       "description":
         [ "Range sliders, like sliders, can be used for filtering data, or gathering numeric ",
-          " input from a site visitor. Range sliders offers two handles to set a min and max ",
+          " input from a site visitor. Range sliders offer two handles to set a min and max ",
           " value along a numeric track. You can set the range values of the slider, as well ",
           " as the deafult handle values. You might use a range slider so that a site visitor ",
           " can choose a price range for their online shopping purposes. ",
           "",
-          " Range sliders also supports a single handle and works as a slider." ],
+          " Range sliders also support a single handle allowing it to function like a [slider]." ],
       "links": [],
       "examples": [],
       "extra":
@@ -66,7 +66,7 @@
             { "lineno": 74,
               "filename": "RangeSlider.js" } ],
         "docs":
-          { "summary": "Sets or gets the range slider tracks's maximum value.",
+          { "summary": "Sets or gets the range slider track's maximum value.",
             "links": [],
             "examples":
               [ { "title": "Get a range slider's maximum value",
@@ -84,8 +84,7 @@
         "extra":
           {  } },
       { "name": "min",
-        "labels":
-          [ "changed" ],
+        "labels": [],
         "get": true,
         "set": true,
         "type": "number",
@@ -114,7 +113,7 @@
           {  } },
       { "name": "sliderType",
         "labels":
-          [ "new" ],
+          [ "changed" ],
         "get": true,
         "set": true,
         "type": "string",
@@ -129,12 +128,12 @@
             "description":
               [ "The `sliderType` can be set as one of the following:",
                 "",
-                "     + `\"Continuous\"`: Continous sliders have a step value of 0.1 that cannot ",
-                "         be changed. When a handle is moved along the slider, it's numeric ",
-                "         value goes up or down by 0.1.  ",
-                "     + `\"Stepped\"`: Stepped sliders have a step value that can adjusted to a ",
-                "         specific value made available by the [`step`]() property. Stepped ",
-                "         sliders will display tick marks based it's step value." ],
+                " - `\"Continuous\"`: Continous sliders have a step value of 0.1 that cannot ",
+                "    be changed. When a handle is moved along the slider, it's numeric ",
+                "    value goes up or down by 0.1.  ",
+                " - `\"Stepped\"`: Stepped sliders have a step value that can adjusted to a ",
+                "    specific value made available by the [`step`](#step) property. Stepped ",
+                "    sliders will display tick marks based it's step value." ],
             "links": [],
             "examples":
               [ { "title": "Get a range slider's type",
@@ -153,7 +152,7 @@
           {  } },
       { "name": "stepType",
         "labels":
-          [ "new" ],
+          [ "changed" ],
         "get": true,
         "set": true,
         "type": "string",
@@ -161,26 +160,21 @@
         "locations":
           [ { "lineno": 110,
               "filename": "RangeSlider.js" },
-            { "lineno": 139,
+            { "lineno": 134,
               "filename": "RangeSlider.js" } ],
         "docs":
           { "summary": "Sets or gets the range slider's step type.",
             "description":
               [ "The `stepType` can be one of the following:",
-                "",
-                "     + `\"Number\"`: The number of steps is determined by the [`step`]() ",
-                "        property's value. For example, suppose a slider has a [`min`]()",
-                "        value of `0`, [`max`]() value of `10`, and ",
-                "        [`step`]() value of `5`. There will be 5 steps, meaning each step will be 2 units. ",
+                " - `\"Number\"`: The number of steps is determined by the [`step`](#step) ",
+                "   property's value. For example, suppose a slider has a [`min`](#min)",
+                "   value of `0`, [`max`](#max) value of `10`, and [`step`](#max) value ",
+                "   of `5`. There will be 5 steps, meaning each step will be 2 units. ",
                 "  ",
-                "     + `\"Value\"`: Each step's size is equal to the number of units defined by the [`step`]() ",
-                "         property's value. For example, suppose a slider has a [`min`]() value of 0, [`max`]() ",
-                "         value of 10, and [`step`]() value of 5. ",
-                "         Each step size will be 5 unites, meaning there will be two 2 steps. ",
-                "",
-                "Stepped sliders have a step value that can adjusted to a ",
-                "         specific value made available by the [`step`]() property. Stepped ",
-                "         sliders will display tick marks based it's step value." ],
+                " - `\"Value\"`: Each step's size is equal to the number of units defined by ",
+                "    the [`step`](#step) property's value. For example, suppose a slider has",
+                "    a [`min`](#min) value of 0, [`max`](#max)  value of 10, and [`step`](#step) ",
+                "    value of 5. Each step size will be 5 unites, meaning there will be two 2 steps." ],
             "links": [],
             "examples":
               [ { "title": "Set a range slider's type",
