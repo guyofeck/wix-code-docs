@@ -1,7 +1,8 @@
 { "name": "Events",
   "memberOf": "wix-crm-backend",
   "mixes": [],
-  "labels": [],
+  "labels":
+    [ "changed" ],
   "location":
     { "lineno": 1,
       "filename": "events.js" },
@@ -47,7 +48,7 @@
         "ret":
           { "type": "void" },
         "locations":
-          [ { "lineno": 175,
+          [ { "lineno": 204,
               "filename": "events.js" } ],
         "docs":
           { "summary": "An event that fires when a new workflow card is created.",
@@ -102,7 +103,7 @@
         "ret":
           { "type": "void" },
         "locations":
-          [ { "lineno": 205,
+          [ { "lineno": 234,
               "filename": "events.js" } ],
         "docs":
           { "summary": "An event that fires when a workflow card is moved.",
@@ -157,7 +158,7 @@
         "ret":
           { "type": "void" },
         "locations":
-          [ { "lineno": 236,
+          [ { "lineno": 265,
               "filename": "events.js" } ],
         "docs":
           { "summary": "An event that fires when a workflow card is moved.",
@@ -321,6 +322,46 @@
                       " */" ],
                   "extra":
                     {  } } ],
+            "extra":
+              {  } },
+        "extra":
+          {  } },
+      { "name": "onContactMerged",
+        "labels":
+          [ "new" ],
+        "nameParams": [],
+        "params":
+          [ { "name": "event",
+              "type": "wix-crm-backend.Events.ContactMergedEvent",
+              "doc": "Target contact ID and source contact IDs,\nupdated target contact information,\nand metadata for the event." } ],
+        "ret":
+          { "type": "void" },
+        "locations":
+          [ { "lineno": 175,
+              "filename": "events.js" } ],
+        "docs":
+          { "summary": "An event that fires when one or more source contacts are merged into a target contact.",
+            "description":
+              [ "The `onContactDeleted()` event handler runs when a",
+                "[contact](https://support.wix.com/en/article/about-your-contact-list)",
+                "is deleted.",
+                "The received `ContactMergedEvent` object",
+                "contains event metadata.",
+                "",
+                "Merging contacts triggers these events:",
+                "",
+                "- [onContactMerged](https://dev.wix.com/api/rest/contacts/contacts/contacts-v4/contact-merged-webhook) is triggered.",
+                "- [onContactUpdated](https://dev.wix.com/api/rest/contacts/contacts/contacts-v4/contact-updated-webhook) is triggered for the target contact. `originatedFrom` is sent with the value `merge`.",
+                "- [onContactDeleted](https://dev.wix.com/api/rest/contacts/contacts/contacts-v4/contact-deleted-webhook) is triggered for each source contact. `originatedFrom` is sent with the value `merge`.",
+                "",
+                "If you handle the originating merge event,",
+                "you can ignore update and delete events where `originatedFrom` is set to `merge`.",
+                "When `onContactUpdated` and `onContactDeleted` are not triggered from a merge,",
+                "`originatedFrom` is omitted from their event object.",
+                "",
+                "> **Note:** Backend events don't work when previewing your site." ],
+            "links": [],
+            "examples": [],
             "extra":
               {  } },
         "extra":
@@ -549,7 +590,7 @@
   "messages":
     [ { "name": "CardCreatedEvent",
         "locations":
-          [ { "lineno": 192,
+          [ { "lineno": 221,
               "filename": "events.js" } ],
         "docs":
           { "summary": "An object representing a created card.",
@@ -607,7 +648,7 @@
         "labels": [] },
       { "name": "CardMovedEvent",
         "locations":
-          [ { "lineno": 221,
+          [ { "lineno": 250,
               "filename": "events.js" } ],
         "docs":
           { "summary": "An object representing a moved card.",
@@ -672,7 +713,7 @@
         "labels": [] },
       { "name": "CardRestoredEvent",
         "locations":
-          [ { "lineno": 253,
+          [ { "lineno": 282,
               "filename": "events.js" } ],
         "docs":
           { "summary": "An object representing a moved card.",
