@@ -48,7 +48,7 @@
         "ret":
           { "type": "void" },
         "locations":
-          [ { "lineno": 204,
+          [ { "lineno": 210,
               "filename": "events.js" } ],
         "docs":
           { "summary": "An event that fires when a new workflow card is created.",
@@ -103,7 +103,7 @@
         "ret":
           { "type": "void" },
         "locations":
-          [ { "lineno": 234,
+          [ { "lineno": 240,
               "filename": "events.js" } ],
         "docs":
           { "summary": "An event that fires when a workflow card is moved.",
@@ -158,7 +158,7 @@
         "ret":
           { "type": "void" },
         "locations":
-          [ { "lineno": 265,
+          [ { "lineno": 271,
               "filename": "events.js" } ],
         "docs":
           { "summary": "An event that fires when a workflow card is moved.",
@@ -213,7 +213,7 @@
         "ret":
           { "type": "void" },
         "locations":
-          [ { "lineno": 125,
+          [ { "lineno": 132,
               "filename": "events.js" } ],
         "docs":
           { "summary": "An event that fires when a new contact is created.",
@@ -287,7 +287,7 @@
         "ret":
           { "type": "void" },
         "locations":
-          [ { "lineno": 159,
+          [ { "lineno": 166,
               "filename": "events.js" } ],
         "docs":
           { "summary": "An event that fires when a contact is deleted.",
@@ -328,16 +328,16 @@
           {  } },
       { "name": "onContactMerged",
         "labels":
-          [ "new" ],
+          [ "changed" ],
         "nameParams": [],
         "params":
           [ { "name": "event",
               "type": "wix-crm-backend.Events.ContactMergedEvent",
-              "doc": "Target contact ID and source contact IDs,\nupdated target contact information,\nand metadata for the event." } ],
+              "doc": "Information about the source and target contacts,\nand metadata for the event." } ],
         "ret":
           { "type": "void" },
         "locations":
-          [ { "lineno": 175,
+          [ { "lineno": 182,
               "filename": "events.js" } ],
         "docs":
           { "summary": "An event that fires when one or more source contacts are merged into a target contact.",
@@ -376,7 +376,7 @@
         "ret":
           { "type": "void" },
         "locations":
-          [ { "lineno": 142,
+          [ { "lineno": 149,
               "filename": "events.js" } ],
         "docs":
           { "summary": "An event that fires when a contact is updated.",
@@ -590,7 +590,7 @@
   "messages":
     [ { "name": "CardCreatedEvent",
         "locations":
-          [ { "lineno": 221,
+          [ { "lineno": 227,
               "filename": "events.js" } ],
         "docs":
           { "summary": "An object representing a created card.",
@@ -648,7 +648,7 @@
         "labels": [] },
       { "name": "CardMovedEvent",
         "locations":
-          [ { "lineno": 250,
+          [ { "lineno": 256,
               "filename": "events.js" } ],
         "docs":
           { "summary": "An object representing a moved card.",
@@ -713,7 +713,7 @@
         "labels": [] },
       { "name": "CardRestoredEvent",
         "locations":
-          [ { "lineno": 282,
+          [ { "lineno": 288,
               "filename": "events.js" } ],
         "docs":
           { "summary": "An object representing a moved card.",
@@ -804,6 +804,26 @@
         "extra":
           {  },
         "labels": [] },
+      { "name": "ContactMergedEvent",
+        "locations":
+          [ { "lineno": 125,
+              "filename": "events.js" } ],
+        "docs":
+          { "links": [],
+            "examples": [],
+            "extra":
+              {  } },
+        "members":
+          [ { "name": "metadata",
+              "type": "wix-crm-backend.Events.EventMetadata",
+              "doc": "Event metadata." },
+            { "name": "entity",
+              "type": "wix-crm-backend.Contacts.Contact",
+              "doc": "Updated target contact." } ],
+        "extra":
+          {  },
+        "labels":
+          [ "new" ] },
       { "name": "ContactUpdatedEvent",
         "locations":
           [ { "lineno": 112,
