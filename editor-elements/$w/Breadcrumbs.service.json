@@ -34,8 +34,7 @@
         {  } },
   "properties":
     [ { "name": "isEllipsisVisible",
-        "labels":
-          [ "changed" ],
+        "labels": [],
         "get": true,
         "set": false,
         "type": "boolean",
@@ -249,7 +248,8 @@
           {  } } ],
   "operations":
     [ { "name": "hideEllipsis",
-        "labels": [],
+        "labels":
+          [ "changed" ],
         "nameParams": [],
         "params": [],
         "ret":
@@ -273,7 +273,7 @@
                     [ "$w(\"#myBreadcrumbs\").hideEllipsis();" ],
                   "extra":
                     {  } },
-                { "title": "Display the middle items in the breadcrumbs trail after clicking a button",
+                { "title": "Display the middle items after clicking a button",
                   "body":
                     [ "$w('#myButton').onClick(() => {",
                       "    $w('#myBreadcrumbs').hideEllipsis();",
@@ -285,7 +285,8 @@
         "extra":
           {  } },
       { "name": "showEllipsis",
-        "labels": [],
+        "labels":
+          [ "changed" ],
         "nameParams": [],
         "params": [],
         "ret":
@@ -304,7 +305,7 @@
             "links":
               [ "[itemsAfterEllipsis](#itemsAfterEllipsis), [itemsBeforeEllipsis](#itemsBeforeEllipsis), [isEllipsisVisible](#isEllipsisVisible), [hideEllipsis](#hideEllipsis)" ],
             "examples":
-              [ { "title": "Display a ellipsis in the breadcrumbs trail",
+              [ { "title": "Display an ellipsis in the breadcrumbs trail",
                   "body":
                     [ "$w(\"#myBreadcrumbs\").showEllipsis();" ],
                   "extra":
