@@ -211,12 +211,15 @@
         "extra":
           {  } },
       { "name": "itemsAfterEllipsis",
-        "labels": [],
+        "labels":
+          [ "changed" ],
         "get": true,
-        "set": false,
+        "set": true,
         "type": "number",
         "locations":
-          [ { "lineno": 174,
+          [ { "lineno": 180,
+              "filename": "Breadcrumbs.js" },
+            { "lineno": 197,
               "filename": "Breadcrumbs.js" } ],
         "docs":
           { "summary": "Sets or gets number of items that appear in the breadcrumbs trail after the ellipsis.",
@@ -249,12 +252,15 @@
         "extra":
           {  } },
       { "name": "itemsBeforeEllipsis",
-        "labels": [],
+        "labels":
+          [ "changed" ],
         "get": true,
-        "set": false,
+        "set": true,
         "type": "number",
         "locations":
           [ { "lineno": 157,
+              "filename": "Breadcrumbs.js" },
+            { "lineno": 174,
               "filename": "Breadcrumbs.js" } ],
         "docs":
           { "summary": "Sets or gets the number of items that appear in the breadcrumbs trail before the ellipsis.",
