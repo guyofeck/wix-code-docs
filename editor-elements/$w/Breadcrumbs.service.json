@@ -11,7 +11,9 @@
   "docs":
     { "summary": "Breadcrumbs are used for navigating between site pages.",
       "description":
-        [ "Breadcrumbs help site visitors navigate from page to page on a site. For example: ",
+        [ "<H3>Note: This feature is not yet available to all users.</H3>",
+          "",
+          " Breadcrumbs help site visitors navigate from page to page on a site. For example: ",
           "",
           "![Sample breadcrumbs](images/breadcrumbs.png \"Breadcrumbs\")",
           "",
@@ -34,13 +36,12 @@
         {  } },
   "properties":
     [ { "name": "isEllipsisVisible",
-        "labels":
-          [ "changed" ],
+        "labels": [],
         "get": true,
         "set": false,
         "type": "boolean",
         "locations":
-          [ { "lineno": 141,
+          [ { "lineno": 143,
               "filename": "Breadcrumbs.js" } ],
         "docs":
           { "summary": "Indicates if the ellipsis is displayed in the breadcrumbs trail.",
@@ -79,9 +80,9 @@
               [ "$w.Breadcrumbs.Item" ] },
         "defaultValue": "An empty array",
         "locations":
-          [ { "lineno": 53,
+          [ { "lineno": 55,
               "filename": "Breadcrumbs.js" },
-            { "lineno": 103,
+            { "lineno": 105,
               "filename": "Breadcrumbs.js" } ],
         "docs":
           { "summary": "Sets or gets `Breadcrumbs` items.",
@@ -210,13 +211,12 @@
         "extra":
           {  } },
       { "name": "itemsAfterEllipsis",
-        "labels":
-          [ "changed" ],
+        "labels": [],
         "get": true,
         "set": false,
         "type": "number",
         "locations":
-          [ { "lineno": 172,
+          [ { "lineno": 174,
               "filename": "Breadcrumbs.js" } ],
         "docs":
           { "summary": "Sets or gets number of items that appear in the breadcrumbs trail after the ellipsis.",
@@ -249,13 +249,12 @@
         "extra":
           {  } },
       { "name": "itemsBeforeEllipsis",
-        "labels":
-          [ "changed" ],
+        "labels": [],
         "get": true,
         "set": false,
         "type": "number",
         "locations":
-          [ { "lineno": 155,
+          [ { "lineno": 157,
               "filename": "Breadcrumbs.js" } ],
         "docs":
           { "summary": "Sets or gets the number of items that appear in the breadcrumbs trail before the ellipsis.",
@@ -289,14 +288,13 @@
           {  } } ],
   "operations":
     [ { "name": "hideEllipsis",
-        "labels":
-          [ "changed" ],
+        "labels": [],
         "nameParams": [],
         "params": [],
         "ret":
           { "type": "void" },
         "locations":
-          [ { "lineno": 125,
+          [ { "lineno": 127,
               "filename": "Breadcrumbs.js" } ],
         "docs":
           { "summary": "Causes a breadcrumbs element to display the middle items of the breadcrumbs trail instead of an ellipsis.",
@@ -326,14 +324,13 @@
         "extra":
           {  } },
       { "name": "showEllipsis",
-        "labels":
-          [ "changed" ],
+        "labels": [],
         "nameParams": [],
         "params": [],
         "ret":
           { "type": "void" },
         "locations":
-          [ { "lineno": 109,
+          [ { "lineno": 111,
               "filename": "Breadcrumbs.js" } ],
         "docs":
           { "summary": "Causes a breadcrumbs element to display an ellipsis instead of the middle items of the breadcrumbs trail.",
@@ -366,7 +363,7 @@
   "messages":
     [ { "name": "Item",
         "locations":
-          [ { "lineno": 30,
+          [ { "lineno": 32,
               "filename": "Breadcrumbs.js" } ],
         "docs":
           { "summary": "An object that contains the attributes of a `Breadcrumbs` item.",
