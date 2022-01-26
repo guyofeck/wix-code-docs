@@ -34,7 +34,8 @@
         {  } },
   "properties":
     [ { "name": "isEllipsisVisible",
-        "labels": [],
+        "labels":
+          [ "changed" ],
         "get": true,
         "set": false,
         "type": "boolean",
@@ -50,18 +51,18 @@
             "examples":
               [ { "title": "Check if the ellipsis is displayed in the breadcrumbs trail",
                   "body":
-                    [ "let ellipsisStatus = $w(\"#myBreadcrumbs\").isEllipsisVisible;" ],
+                    [ "let ellipsisStatus = $w('#myBreadcrumbs').isEllipsisVisible; // true" ],
                   "extra":
                     {  } },
                 { "title": "Set a button to toggle the ellipsis in the breadcrumbs trail when clicked",
                   "body":
-                    [ "$w(\"#myButton\").onClick((e) => {",
-                      "    if($w(\"#myBreadcrumbs\").isEllipsisVisible){",
-                      "        $w(\"#myBreadcrumbs\").hideEllipsis();",
+                    [ "$w('#myButton').onClick(() => {",
+                      "    if($w('#myBreadcrumbs').isEllipsisVisible){",
+                      "        $w('#myBreadcrumbs').hideEllipsis();",
                       "    } else {",
-                      "        $w(\"#myBreadcrumbs\").showEllipsis();",
+                      "        $w('#myBreadcrumbs').showEllipsis();",
                       "    }",
-                      "})" ],
+                      "});" ],
                   "extra":
                     {  } } ],
             "extra":
@@ -209,26 +210,47 @@
         "extra":
           {  } },
       { "name": "itemsAfterEllipsis",
-        "labels": [],
+        "labels":
+          [ "changed" ],
         "get": true,
         "set": false,
         "type": "number",
         "locations":
-          [ { "lineno": 167,
+          [ { "lineno": 172,
               "filename": "Breadcrumbs.js" } ],
         "docs":
           { "summary": "Sets or gets number of items that appear in the breadcrumbs trail after the ellipsis.",
             "description":
-              [ "The value of `itemsAfterEllipsis` must be greater than 1 and less than the total number of items in the breadcrumbs trail." ],
+              [ "Defaults to `1`.",
+                "",
+                "The value of `itemsAfterEllipsis` must be greater than 1 and less than the total number of items in the breadcrumbs trail." ],
             "links":
               [ "[itemsBeforeEllipsis](#itemsAfterEllipsis), [showEllipsis](#showEllipsis), [hideEllipsis](#hideEllipsis), [isEllipsisVisible](#isEllipsisVisible)" ],
-            "examples": [],
+            "examples":
+              [ { "title": "Get the number of items that appear after the ellipsis",
+                  "body":
+                    [ "let afterEllipsis = $w('#myBreadcrumbs').itemsAfterEllipsis;" ],
+                  "extra":
+                    {  } },
+                { "title": "Set the number of items that appear after the ellipsis",
+                  "body":
+                    [ "$w('#myBreadcrumbs').itemsAfterEllipsis = 2;" ],
+                  "extra":
+                    {  } },
+                { "title": "Increase the number of items after the ellipsis for breadcrumb trails under a certain length",
+                  "body":
+                    [ "if ($w('#myBreadcrumbs').items.length < 5) {",
+                      "    $w('#myBreadcrumbs').itemsAfterEllipsis = 5 - $w('#myBreadcrumbs').items.length;",
+                      "}" ],
+                  "extra":
+                    {  } } ],
             "extra":
               {  } },
         "extra":
           {  } },
       { "name": "itemsBeforeEllipsis",
-        "labels": [],
+        "labels":
+          [ "changed" ],
         "get": true,
         "set": false,
         "type": "number",
@@ -238,10 +260,29 @@
         "docs":
           { "summary": "Sets or gets the number of items that appear in the breadcrumbs trail before the ellipsis.",
             "description":
-              [ "The value of `itemsBeforeEllipsis` must be greater than 1 and less than the total number of items in the breadcrumbs trail." ],
+              [ "Defaults to `1`.",
+                "",
+                "The value of `itemsBeforeEllipsis` must be greater than 1 and less than the total number of items in the breadcrumbs trail." ],
             "links":
               [ "[itemsAfterEllipsis](#itemsAfterEllipsis), [showEllipsis](#showEllipsis), [hideEllipsis](#hideEllipsis), [isEllipsisVisible](#isEllipsisVisible)" ],
-            "examples": [],
+            "examples":
+              [ { "title": "Get the number of items that appear before the ellipsis",
+                  "body":
+                    [ "let beforeEllipsis = $w('#myBreadcrumbs').itemsBeforeEllipsis; // 2" ],
+                  "extra":
+                    {  } },
+                { "title": "Set the number of items that appear before the ellipsis",
+                  "body":
+                    [ "$w('#myBreadcrumbs').itemsBeforeEllipsis = 2;" ],
+                  "extra":
+                    {  } },
+                { "title": "Increase the number of items before the ellipsis for breadcrumb trails under a certain length",
+                  "body":
+                    [ "if ($w('#myBreadcrumbs').items.length < 5) {",
+                      "    $w('#myBreadcrumbs').itemsBeforeEllipsis = 5 - $w('#myBreadcrumbs').items.length;",
+                      "}" ],
+                  "extra":
+                    {  } } ],
             "extra":
               {  } },
         "extra":
@@ -270,7 +311,7 @@
             "examples":
               [ { "title": "Display the middle items in the breadcrumbs trails",
                   "body":
-                    [ "$w(\"#myBreadcrumbs\").hideEllipsis();" ],
+                    [ "$('#myBreadcrumbs').hideEllipsis();" ],
                   "extra":
                     {  } },
                 { "title": "Display the middle items after clicking a button",
@@ -307,7 +348,7 @@
             "examples":
               [ { "title": "Display an ellipsis in the breadcrumbs trail",
                   "body":
-                    [ "$w(\"#myBreadcrumbs\").showEllipsis();" ],
+                    [ "$w('#myBreadcrumbs').showEllipsis();" ],
                   "extra":
                     {  } },
                 { "title": "Display an ellipsis after clicking a button",
