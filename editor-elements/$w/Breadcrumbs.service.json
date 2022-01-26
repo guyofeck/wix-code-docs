@@ -4,7 +4,7 @@
     [ "$w.HiddenCollapsedMixin",
       "$w.ViewportMixin" ],
   "labels":
-    [ "new" ],
+    [ "changed" ],
   "location":
     { "lineno": 1,
       "filename": "Breadcrumbs.js" },
@@ -33,7 +33,27 @@
       "extra":
         {  } },
   "properties":
-    [ { "name": "items",
+    [ { "name": "isEllipsisVisible",
+        "labels":
+          [ "new" ],
+        "get": true,
+        "set": false,
+        "type": "boolean",
+        "locations":
+          [ { "lineno": 137,
+              "filename": "Breadcrumbs.js" } ],
+        "docs":
+          { "summary": "Indicates if the ellipsis is displayed in the breadcrumbs trail.",
+            "description":
+              [ "To change the `isEllipsisVisible` property, use the [showEllipsis()](#showEllipsis) and [hideEllipsis()](#hideEllipsis) functions." ],
+            "links":
+              [ "[itemsAfterEllipsis](#itemsAfterEllipsis),[itemsBeforeEllipsis](#itemsBeforeEllipsis), [showEllipsis](#showEllipsis), [hideEllipsis](#hideEllipsis)" ],
+            "examples": [],
+            "extra":
+              {  } },
+        "extra":
+          {  } },
+      { "name": "items",
         "labels": [],
         "get": true,
         "set": true,
@@ -172,8 +192,98 @@
             "extra":
               {  } },
         "extra":
+          {  } },
+      { "name": "itemsAfterEllipsis",
+        "labels":
+          [ "new" ],
+        "get": true,
+        "set": false,
+        "type": "number",
+        "locations":
+          [ { "lineno": 161,
+              "filename": "Breadcrumbs.js" } ],
+        "docs":
+          { "summary": "Sets or gets number of items that appear in the breadcrumbs trail after the ellipsis.",
+            "description":
+              [ "The value of `itemsAfterEllipsis` must be greater than 1 and less than the total number of items in the breadcrumbs trail." ],
+            "links":
+              [ "[itemsBeforeEllipsis](#itemsAfterEllipsis), [showEllipsis](#showEllipsis), [hideEllipsis](#hideEllipsis), [isEllipsisVisible](#isEllipsisVisible)" ],
+            "examples": [],
+            "extra":
+              {  } },
+        "extra":
+          {  } },
+      { "name": "itemsBeforeEllipsis",
+        "labels":
+          [ "new" ],
+        "get": true,
+        "set": false,
+        "type": "number",
+        "locations":
+          [ { "lineno": 149,
+              "filename": "Breadcrumbs.js" } ],
+        "docs":
+          { "summary": "Sets or gets the number of items that appear in the breadcrumbs trail before the ellipsis.",
+            "description":
+              [ "The value of `itemsBeforeEllipsis` must be greater than 1 and less than the total number of items in the breadcrumbs trail." ],
+            "links":
+              [ "[itemsAfterEllipsis](#itemsAfterEllipsis), [showEllipsis](#showEllipsis), [hideEllipsis](#hideEllipsis), [isEllipsisVisible](#isEllipsisVisible)" ],
+            "examples": [],
+            "extra":
+              {  } },
+        "extra":
           {  } } ],
-  "operations": [],
+  "operations":
+    [ { "name": "hideEllipsis",
+        "labels":
+          [ "new" ],
+        "nameParams": [],
+        "params": [],
+        "ret":
+          { "type": "void" },
+        "locations":
+          [ { "lineno": 123,
+              "filename": "Breadcrumbs.js" } ],
+        "docs":
+          { "summary": "Causes a breadcrumbs element to display the middle items of the breadcrumbs trail instead of an ellipsis.",
+            "description":
+              [ "The number of items displayed in the breadcrumbs trail when you invoke `hideEllipsis()` depends on the values of the `itemsBeforeEllipsis` ",
+                "and `itemsAfterEllipsis` properties. Any items not accounted for by those properties are displayed in stead of the ellipsis.",
+                "",
+                "For example, if your breadcrumbs trail includes 5 items and `itemsBeforeEllipsis` and `itemsAfterEllipsis` are both set to 1, the 3 middle items in the trail",
+                "are displayed when you invoke `hideEllipsis()`." ],
+            "links":
+              [ "[itemsAfterEllipsis](#itemsAfterEllipsis),[itemsBeforeEllipsis](#itemsBeforeEllipsis), [isEllipsisVisible](#isEllipsisVisible), [showEllipsis](#showEllipsis)" ],
+            "examples": [],
+            "extra":
+              {  } },
+        "extra":
+          {  } },
+      { "name": "showEllipsis",
+        "labels":
+          [ "new" ],
+        "nameParams": [],
+        "params": [],
+        "ret":
+          { "type": "void" },
+        "locations":
+          [ { "lineno": 109,
+              "filename": "Breadcrumbs.js" } ],
+        "docs":
+          { "summary": "Causes a breadcrumbs element to display an ellipsis instead of the middle items of the breadcrumbs trail.",
+            "description":
+              [ "The number of items hidden in the breadcrumbs trail when you invoke `showEllipsis()` depends on the values of the `itemsBeforeEllipsis` ",
+                "and `itemsAfterEllipsis` properties. Any items not accounted for by those properties are hidden and replaced by an ellipsis.",
+                "",
+                "For example, if your breadcrumbs trail includes 5 items and `itemsBeforeEllipsis` and `itemsAfterEllipsis` are both set to 1, the 3 middle items in the trail",
+                "are hidden when you invoke `showEllipsis()`." ],
+            "links":
+              [ "[itemsAfterEllipsis](#itemsAfterEllipsis),[itemsBeforeEllipsis](#itemsBeforeEllipsis), [isEllipsisVisible](#isEllipsisVisible), [hideEllipsis](#hideEllipsis)" ],
+            "examples": [],
+            "extra":
+              {  } },
+        "extra":
+          {  } } ],
   "callbacks": [],
   "messages":
     [ { "name": "Item",
