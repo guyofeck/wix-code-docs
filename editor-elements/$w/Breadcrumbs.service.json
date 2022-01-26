@@ -35,20 +35,25 @@
   "properties":
     [ { "name": "isEllipsisVisible",
         "labels":
-          [ "new" ],
+          [ "changed" ],
         "get": true,
         "set": false,
         "type": "boolean",
         "locations":
-          [ { "lineno": 137,
+          [ { "lineno": 141,
               "filename": "Breadcrumbs.js" } ],
         "docs":
           { "summary": "Indicates if the ellipsis is displayed in the breadcrumbs trail.",
             "description":
               [ "To change the `isEllipsisVisible` property, use the [showEllipsis()](#showEllipsis) and [hideEllipsis()](#hideEllipsis) functions." ],
             "links":
-              [ "[itemsAfterEllipsis](#itemsAfterEllipsis),[itemsBeforeEllipsis](#itemsBeforeEllipsis), [showEllipsis](#showEllipsis), [hideEllipsis](#hideEllipsis)" ],
-            "examples": [],
+              [ "[itemsAfterEllipsis](#itemsAfterEllipsis), [itemsBeforeEllipsis](#itemsBeforeEllipsis), [showEllipsis](#showEllipsis), [hideEllipsis](#hideEllipsis)" ],
+            "examples":
+              [ { "title": "Check if the ellipsis is displayed in the breadcrumbs trail",
+                  "body":
+                    [ "let ellipsisStatus = $w(\"#myBreadcrumbs\").isEllipsisVisible;" ],
+                  "extra":
+                    {  } } ],
             "extra":
               {  } },
         "extra":
@@ -194,13 +199,12 @@
         "extra":
           {  } },
       { "name": "itemsAfterEllipsis",
-        "labels":
-          [ "new" ],
+        "labels": [],
         "get": true,
         "set": false,
         "type": "number",
         "locations":
-          [ { "lineno": 161,
+          [ { "lineno": 167,
               "filename": "Breadcrumbs.js" } ],
         "docs":
           { "summary": "Sets or gets number of items that appear in the breadcrumbs trail after the ellipsis.",
@@ -214,13 +218,12 @@
         "extra":
           {  } },
       { "name": "itemsBeforeEllipsis",
-        "labels":
-          [ "new" ],
+        "labels": [],
         "get": true,
         "set": false,
         "type": "number",
         "locations":
-          [ { "lineno": 149,
+          [ { "lineno": 155,
               "filename": "Breadcrumbs.js" } ],
         "docs":
           { "summary": "Sets or gets the number of items that appear in the breadcrumbs trail before the ellipsis.",
@@ -236,13 +239,13 @@
   "operations":
     [ { "name": "hideEllipsis",
         "labels":
-          [ "new" ],
+          [ "changed" ],
         "nameParams": [],
         "params": [],
         "ret":
           { "type": "void" },
         "locations":
-          [ { "lineno": 123,
+          [ { "lineno": 125,
               "filename": "Breadcrumbs.js" } ],
         "docs":
           { "summary": "Causes a breadcrumbs element to display the middle items of the breadcrumbs trail instead of an ellipsis.",
@@ -253,15 +256,27 @@
                 "For example, if your breadcrumbs trail includes 5 items and `itemsBeforeEllipsis` and `itemsAfterEllipsis` are both set to 1, the 3 middle items in the trail",
                 "are displayed when you invoke `hideEllipsis()`." ],
             "links":
-              [ "[itemsAfterEllipsis](#itemsAfterEllipsis),[itemsBeforeEllipsis](#itemsBeforeEllipsis), [isEllipsisVisible](#isEllipsisVisible), [showEllipsis](#showEllipsis)" ],
-            "examples": [],
+              [ "[itemsAfterEllipsis](#itemsAfterEllipsis), [itemsBeforeEllipsis](#itemsBeforeEllipsis), [isEllipsisVisible](#isEllipsisVisible), [showEllipsis](#showEllipsis)" ],
+            "examples":
+              [ { "title": "Display the middle items in the breadcrumbs trails",
+                  "body":
+                    [ "$w(\"#myBreadcrumbs\").hideEllipsis();" ],
+                  "extra":
+                    {  } },
+                { "title": "Display the middle items in the breadcrumbs trail after clicking a button",
+                  "body":
+                    [ "$w('#myButton').onClick(() => {",
+                      "    $w('#myBreadcrumbs').hideEllipsis();",
+                      "})" ],
+                  "extra":
+                    {  } } ],
             "extra":
               {  } },
         "extra":
           {  } },
       { "name": "showEllipsis",
         "labels":
-          [ "new" ],
+          [ "changed" ],
         "nameParams": [],
         "params": [],
         "ret":
@@ -278,8 +293,20 @@
                 "For example, if your breadcrumbs trail includes 5 items and `itemsBeforeEllipsis` and `itemsAfterEllipsis` are both set to 1, the 3 middle items in the trail",
                 "are hidden when you invoke `showEllipsis()`." ],
             "links":
-              [ "[itemsAfterEllipsis](#itemsAfterEllipsis),[itemsBeforeEllipsis](#itemsBeforeEllipsis), [isEllipsisVisible](#isEllipsisVisible), [hideEllipsis](#hideEllipsis)" ],
-            "examples": [],
+              [ "[itemsAfterEllipsis](#itemsAfterEllipsis), [itemsBeforeEllipsis](#itemsBeforeEllipsis), [isEllipsisVisible](#isEllipsisVisible), [hideEllipsis](#hideEllipsis)" ],
+            "examples":
+              [ { "title": "Display a ellipsis in the breadcrumbs trail",
+                  "body":
+                    [ "$w(\"#myBreadcrumbs\").showEllipsis();" ],
+                  "extra":
+                    {  } },
+                { "title": "Display an ellipsis after clicking a button",
+                  "body":
+                    [ "$w('#myButton').onClick(() => {",
+                      "    $w('#myBreadcrumbs').showEllipsis();",
+                      "})" ],
+                  "extra":
+                    {  } } ],
             "extra":
               {  } },
         "extra":
