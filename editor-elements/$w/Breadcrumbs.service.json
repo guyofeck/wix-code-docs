@@ -53,6 +53,17 @@
                   "body":
                     [ "let ellipsisStatus = $w(\"#myBreadcrumbs\").isEllipsisVisible;" ],
                   "extra":
+                    {  } },
+                { "title": "Set a button to toggle the ellipsis in the breadcrumbs trail when clicked",
+                  "body":
+                    [ "$w(\"#myButton\").onClick((e) => {",
+                      "    if($w(\"#myBreadcrumbs\").isEllipsisVisible){",
+                      "        $w(\"#myBreadcrumbs\").hideEllipsis();",
+                      "    } else {",
+                      "        $w(\"#myBreadcrumbs\").showEllipsis();",
+                      "    }",
+                      "})" ],
+                  "extra":
                     {  } } ],
             "extra":
               {  } },
@@ -238,8 +249,7 @@
           {  } } ],
   "operations":
     [ { "name": "hideEllipsis",
-        "labels":
-          [ "changed" ],
+        "labels": [],
         "nameParams": [],
         "params": [],
         "ret":
@@ -275,8 +285,7 @@
         "extra":
           {  } },
       { "name": "showEllipsis",
-        "labels":
-          [ "changed" ],
+        "labels": [],
         "nameParams": [],
         "params": [],
         "ret":
