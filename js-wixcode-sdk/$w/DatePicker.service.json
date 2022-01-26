@@ -8,12 +8,13 @@
       "$w.ReadOnlyMixin",
       "$w.ClickableMixin",
       "$w.RequiredMixin" ],
-  "labels": [],
+  "labels":
+    [ "changed" ],
   "location":
     { "lineno": 1,
       "filename": "DatePicker.js" },
   "docs":
-    { "summary": "A `DatePicker` is used for entering dates. It lets site visitors populate a\n date field by picking a date using a calendar popup.",
+    { "summary": "A `DatePicker` is used for entering dates. It lets site visitors populate a\n date field by picking a date using a calendar popup.\nYou can enable and disable dates, date ranges, and days of the week  on your date picker.\n\ndisabledDaysOfWeek overrides enabledDateRanges.\ndisabledDaysOfWeek override minDate, maxDate \ndisabledDaysOfWeek overrides enabledDateRanges.\ndisabledDaysOfWeek override minDate, maxDate (e.g. if minDate is 20.4 which is wednesday and wednesday is disabled according to disabledDaysOfWeek: Wednesday will be disabled)\nminDate, maxDate override enabledDateRanges\nE.g. if enabledDateRanges is:\n[\n\t{startDate: new Date('10/23/2020'), endDate: new Date('10/30/2020')}\n]\n\tAnd minDate is 10/24/2020, than:\n\t10/23/2020 is disabled",
       "links": [],
       "examples": [],
       "extra":
@@ -26,9 +27,9 @@
         "type": "string",
         "defaultValue": "'MM/DD/YYYY'",
         "locations":
-          [ { "lineno": 38,
+          [ { "lineno": 51,
               "filename": "DatePicker.js" },
-            { "lineno": 63,
+            { "lineno": 76,
               "filename": "DatePicker.js" } ],
         "docs":
           { "summary": "Sets or gets the format of the date displayed in the date picker.",
@@ -69,9 +70,9 @@
             "typeParams":
               [ "$w.DatePicker.DateRange" ] },
         "locations":
-          [ { "lineno": 226,
+          [ { "lineno": 241,
               "filename": "DatePicker.js" },
-            { "lineno": 266,
+            { "lineno": 281,
               "filename": "DatePicker.js" } ],
         "docs":
           { "summary": "Sets or gets ranges of dates that a site visitor can't select.",
@@ -190,9 +191,9 @@
             "typeParams":
               [ "Date" ] },
         "locations":
-          [ { "lineno": 273,
+          [ { "lineno": 288,
               "filename": "DatePicker.js" },
-            { "lineno": 301,
+            { "lineno": 316,
               "filename": "DatePicker.js" } ],
         "docs":
           { "summary": "**Deprecated.** This property will continue to work, but a newer version is available at [`disabledDateRanges`](https://www.wix.com/velo/reference/$w/datepicker/disableddateranges).",
@@ -241,9 +242,9 @@
             "typeParams":
               [ "number" ] },
         "locations":
-          [ { "lineno": 308,
+          [ { "lineno": 323,
               "filename": "DatePicker.js" },
-            { "lineno": 342,
+            { "lineno": 357,
               "filename": "DatePicker.js" } ],
         "docs":
           { "summary": "Sets or gets the days of the week that a site visitor can't select.",
@@ -320,7 +321,8 @@
         "extra":
           {  } },
       { "name": "enabledDateRanges",
-        "labels": [],
+        "labels":
+          [ "changed" ],
         "get": true,
         "set": true,
         "type":
@@ -328,9 +330,9 @@
             "typeParams":
               [ "$w.DatePicker.DateRange" ] },
         "locations":
-          [ { "lineno": 170,
+          [ { "lineno": 183,
               "filename": "DatePicker.js" },
-            { "lineno": 218,
+            { "lineno": 233,
               "filename": "DatePicker.js" } ],
         "docs":
           { "summary": "Sets or gets ranges of dates that a site visitor can select.",
@@ -338,6 +340,8 @@
               [ "Setting the `enabledDateRanges` property lets site visitors",
                 " select dates in the specified ranges, provided that the dates aren't ",
                 " disabled by some other property. ",
+                "  ",
+                " Setting the `enabledDateRanges` property sets all dates outside the range to disabled.",
                 "",
                 " Set `enabledDateRanges` to:",
                 " + An array of date ranges to enable, each with a start date and an end date.",
@@ -463,9 +467,9 @@
         "type": "Date",
         "defaultValue": "undefined",
         "locations":
-          [ { "lineno": 104,
+          [ { "lineno": 117,
               "filename": "DatePicker.js" },
-            { "lineno": 130,
+            { "lineno": 143,
               "filename": "DatePicker.js" } ],
         "docs":
           { "summary": "Sets or gets the latest date that a site visitor can select.",
@@ -508,9 +512,9 @@
         "type": "Date",
         "defaultValue": "undefined",
         "locations":
-          [ { "lineno": 137,
+          [ { "lineno": 150,
               "filename": "DatePicker.js" },
-            { "lineno": 163,
+            { "lineno": 176,
               "filename": "DatePicker.js" } ],
         "docs":
           { "summary": "Sets or gets the earliest date that a site visitor can select.",
@@ -551,9 +555,9 @@
         "set": true,
         "type": "string",
         "locations":
-          [ { "lineno": 349,
+          [ { "lineno": 364,
               "filename": "DatePicker.js" },
-            { "lineno": 381,
+            { "lineno": 396,
               "filename": "DatePicker.js" } ],
         "docs":
           { "summary": "Sets or gets the date picker's timezone.",
@@ -600,9 +604,9 @@
         "set": true,
         "type": "Date",
         "locations":
-          [ { "lineno": 69,
+          [ { "lineno": 82,
               "filename": "DatePicker.js" },
-            { "lineno": 97,
+            { "lineno": 110,
               "filename": "DatePicker.js" } ],
         "docs":
           { "summary": "Sets or gets the value of the date picker.",
@@ -645,7 +649,7 @@
   "messages":
     [ { "name": "DateRange",
         "locations":
-          [ { "lineno": 20,
+          [ { "lineno": 33,
               "filename": "DatePicker.js" } ],
         "docs":
           { "summary": "An object containing the start and end dates of a range of dates.",
